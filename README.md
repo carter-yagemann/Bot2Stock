@@ -42,6 +42,10 @@ virtualenv -p /usr/bin/python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
+#### Known Issues & Workarounds
+
+* Mac OS does not provide `nproc`, which breaks `b2s-test.sh` and `b2s-eval.sh`.
+  A workaround is to replace `nproc` with `sysctl -n hw.logicalcpu` in both scripts.
 
 #### Usage
 
